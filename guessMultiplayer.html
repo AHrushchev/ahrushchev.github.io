@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head >
+	<title>My first site 2</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script type="text/javascript">
+
+	function Play(){
+			
+		var answer = parseInt(Math.random() *100);
+		
+		var firstPlayerName = prompt("Player1\nEnter your name ");
+		
+		var secondPlayerName =prompt("Player2\nEnter your name");
+
+		alert("Computer picked a number between 1 and 100\n\nEach of you has 5 attemps to guess the number\n\nLets Play")
+
+		var i=5;
+
+			do{
+				
+				i--;
+				if (i==0){
+					alert("Game over");
+					break;
+				}	
+
+				var player1 = prompt(firstPlayerName+", enter your variant");
+				if (player1=="q") break;
+
+				var player1=parseInt(player1);
+				
+				if(player1==answer){
+					
+					alert(firstPlayerName+" Win !!!");
+					break;
+					
+				}else if(player1<answer){
+					alert(firstPlayerName+", your number less\n\nYou have "+i+" attemps");
+
+				}else if(player1>answer){
+					alert(firstPlayerName+", your number more\n\nYou have "+i+" attemps");
+				}
+
+				var player2 = prompt(secondPlayerName+", enter your variant");
+
+				if (player2=="q") break;
+
+				var player2=parseInt(player2);
+
+				if(player2==answer){
+					alert(secondPlayerName+" Win !!!");
+					break;
+					
+				}else if(player2<answer){
+					alert(secondPlayerName+", your number less\n\nYou have "+i+" attemps");
+
+				}else if(player2>answer){
+					alert(secondPlayerName+", your number more\n\nYou have "+i+" attemps");
+				}
+
+				
+				
+				
+			} while(i>=0)
+
+	}	
+
+	</script>
+	
+</head>
+<body>
+	<div id="fl">
+		<a  href="oneMoreSite.html" class="line main">Main</a>
+		<a  href="puzzle.html" class="line puzzle">Puzzle</a>
+		<a  href="guess.html" class="line guess">Guess</a>
+		<a  href="guessMultiplayer.html" class="line guessMult">Guess multiplayer</a>
+	</div>
+
+	<div>
+		<h1>Угадайка мультплеер</h1>
+	</div>	
+
+	<div>
+		<p><h2>Игра для двух игроков.</h2></p>
+		<p><h2>Компьютер загадал число от 1 до 100.</p> 
+		<p>Ваша задача угадать его по очереди.</p> 
+		<p>Каждому игроку дается 5 попыток.</h2></p>
+	</div>
+
+	<div>
+		<a href="#" onclick="Play();">Начать игру !!!</a>
+	</div>
+	
+
+
+
+
+		
+		<p><b>Copyright (c) 2016</b></p>
+
+
+
+</body>
+</html>
