@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head >
+	<title>My first site 2</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		function checkUnswers(){
+			var res1 = document.getElementById("answer1").value;
+			var count = 0;
+
+			if(res1.toLowerCase()=="подушка"){
+				
+				count++
+			
+			}
+
+			var res2 = document.getElementById("answer2").value;
+
+			if(res2.toLowerCase()=="петух"){
+				
+				count++
+			}
+			
+
+			var res3 = document.getElementById("answer3").value;
+
+			if(res3.toLowerCase()=="сорока"){
+				
+				count++
+			}
+			
+
+			var res4 = document.getElementById("answer4").value;
+
+			if(res4.toLowerCase()=="шапка"){
+				
+				count++
+			}
+			
+
+			alert(+count+ " парвильно");
+
+		}
+	</script>
+</head>
+<body>
+	<div id="fl">
+		<a  href="index.html" class="line main">Main</a>
+		<a  href="puzzle.html" class="line puzzle">Puzzle</a>
+		<a  href="guess.html" class="line guess">Guess</a>
+		<a  href="guessMultiplayer.html" class="line guessMult">Guess multiplayer</a>
+	</div>	
+	
+	<div><h1>Игра в загадки</h1>
+	</div>
+
+	<div><h2>Я загадал несколько загадок, попробуй их отгадать !</h2>
+		<p>Вспушит она свои бока,</p>
+		<p>Свои четыре уголка</p>
+		<p>И тебя, как ночь настанет,</p>
+		<p>Все равно к себе притянет.</p>
+		<input  type="text" id = "answer1"></input>
+		
+	</div>
+
+	<div>
+		<br>
+		<p>Не ездок, а со шпорами,</p>
+		<p>Не будильник, а всех будит.</p>
+		<input id="answer2" type="text"></input></br>
+		
+	</div>
+
+	<div>
+		<p>Верещунья белобока</p>
+		<p>А зовут ее ....</p>
+		<input id="answer3" type="text"></input>
+		
+	</div>
+
+	<div>
+		<p>Сижу верхом,</p>
+		<p>Не ведаю на ком.</p>
+		
+		<br><input  id="answer4" type="text"></input></br>
+		<br><a href="#" onclick="checkUnswers()">Оветить</a></br>
+	</div>
+
+
+
+
+		
+		<p><b>Copyright (c) 2016</b></p>
+
+
+
+</body>
+</html>

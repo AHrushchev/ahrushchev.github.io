@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head >
+	<title>My first site 2</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script type="text/javascript">
+
+	function Play(){
+			
+		var answer = parseInt(Math.random() *100);
+		
+		var firstPlayerName = prompt("Enter your name ");
+		
+		
+
+		alert("Computer picked a number between 1 and 100\nYou has 5 attemps to guess the number\n\nLets Play")
+
+		var i=5;
+
+			do{
+				
+				i--;
+				if (i==0){
+					alert("Game over");
+					break;
+				}	
+
+				var player1 = prompt(firstPlayerName+", enter your variant");
+				if (player1=="q") break;
+
+				var player1=parseInt(player1);
+				
+				if(player1==answer){
+					
+					alert(firstPlayerName+" Win !!!");
+					break;
+					
+				}else if(player1<answer){
+					alert(firstPlayerName+", your number less\n\nYou have "+i+" attemps");
+
+				}else if(player1>answer){
+					alert(firstPlayerName+", your number more\n\nYou have "+i+" attemps");
+				}
+
+				
+			} while(i>=0)
+
+	}	
+
+	</script>
+	
+</head>
+<body>
+	<div id="fl">
+		<a  href="index.html" class="line main">Main</a>
+		<a  href="puzzle.html" class="line puzzle">Puzzle</a>
+		<a  href="guess.html" class="line guess">Guess</a>
+		<a  href="guessMultiplayer.html" class="line guessMult">Guess multiplayer</a>
+	</div>
+
+	<div>
+		<h1>Угадайка </h1>
+	</div>	
+
+	<div>
+		
+		<p><h2>Компьютер загадал число от 1 до 100.</p> 
+		<p>Ваша задача угадать его за 5 попыток.</p> 
+		
+	</div>
+
+	<div>
+		<a href="#" onclick="Play();">Начать игру !!!</a>
+	</div>
+	
+
+
+
+
+		
+		<p><b>Copyright (c) 2016</b></p>
+
+
+
+</body>
+</html>
